@@ -5,14 +5,15 @@ layout: default
   <h1>{{ page.title }}</h1>
 
   {% assign coll = page.collection | default: 'posts' %}
+
   {% if coll == 'posts' %}
-    {% assign items = site.posts | where_exp: 'p', 'p.lang == page.lang or p.lang == nil' | sort: 'date' | reverse %}
+    {%- assign items = site.posts | where: "lang", page.lang | sort: "date" | reverse -%}
   {% elsif coll == 'events' %}
-    {% assign items = site.events | sort: 'date' %}
+    {%- assign items = site.events | sort: "date" -%}
   {% elsif coll == 'sermons' %}
-    {% assign items = site.sermons | sort: 'date' | reverse %}
+    {%- assign items = site.sermons | sort: "date" | reverse -%}
   {% else %}
-    {% assign items = site[coll] %}
+    {%- assign items = site[coll] -%}
   {% endif %}
 
   {% if items and items.size > 0 %}

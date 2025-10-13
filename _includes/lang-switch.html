@@ -1,4 +1,9 @@
-{% assign other = page.lang == 'fr' ? 'mg' : 'fr' %}
+{% if page.lang == 'fr' %}
+  {% assign other = 'mg' %}
+{% else %}
+  {% assign other = 'fr' %}
+{% endif %}
+
 {% if page.alt_url %}
   <a class="lang" href="{{ page.alt_url | relative_url }}">{{ other | upcase }}</a>
 {% else %}

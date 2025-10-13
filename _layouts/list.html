@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<article class="list">
+  <h1>{{ page.title }}</h1>
+
+  {% assign coll = page.collection | default: 'posts' %}
+  {% if coll == 'posts' %}
+    {% assign items = site.posts | where_exp: 'p', 'p.lang == page.lang or p.lang == nil' | sort: 'date' | reverse %}
+  {% elsif coll == 'events' %}
+    {% assign items = site.events | sort: 'date' %}
+  {% elsif coll == 'sermons' %}
+    {% assign items = site.sermons | sort: 'date' | reverse %}
+  {% else %}
+    {% assign items = site[coll] %}
+  {% endif %}
+
+  {% if items and items.size > 0 %}
+  <ul class="list-items">
+    {% for it in items %}
+      <li>
+        <a href="{{ it.url | relative_url }}">{{ it.title }}</a>
+        {% if it.date %}<small> - {{ it.date | date: "%d/%m/%Y" }}</small>{% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p><em>{% if page.lang == "mg" %}Tsy mbola misy votoaty.{% else %}Aucun contenu pour le moment.{% endif %}</em></p>
+  {% endif %}
+</article>

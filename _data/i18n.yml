@@ -1,0 +1,35 @@
+fr:
+  menu:
+    home: Accueil
+    about: À propos
+    news: Actualités
+    events: Évènements
+    sermons: Enseignements
+    ministries: Ministères
+    contact: Contact
+
+mg:
+  menu:
+    home: Fandraisana
+    about: Momban’ny fiangonana
+    news: Vaovao
+    events: Hetsika
+    sermons: Toriteny
+    ministries: Sampan’asa
+    contact: Fifandraisana
+
+routes:
+  fr:
+    about: a-propos
+    news: actualites
+    events: evenements
+    sermons: sermons
+    ministries: ministeres
+    contact: contact
+  mg:
+    about: momba
+    news: vaovao
+    events: hetsika
+    sermons: toriteny
+    ministries: sampanasa
+    contact: fifandraisana

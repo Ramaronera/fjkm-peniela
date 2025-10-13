@@ -1,0 +1,24 @@
+title: Peniela FJKM
+description: Eglise – Fiangonana
+encoding: utf-8
+timezone: Europe/Paris
+permalink: pretty
+markdown: kramdown
+url: ""
+baseurl: ""
+
+collections:
+  events:
+    output: true
+    permalink: /:collection/:name/
+  sermons:
+    output: true
+    permalink: /:collection/:name/
+
+defaults:
+  - scope: { path: "fr" }
+    values: { lang: "fr", layout: "page" }
+  - scope: { path: "mg" }
+    values: { lang: "mg", layout: "page" }
+
+exclude: [node_modules, vendor, README.md]

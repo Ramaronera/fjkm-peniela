@@ -1,0 +1,28 @@
+---
+layout: null
+---
+
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Redirection…</title>
+  <link rel="canonical" href="{{ '/fr/' | relative_url }}">
+  <meta http-equiv="refresh" content="0; url={{ '/fr/' | relative_url }}">
+</head>
+<body>
+  <p>Redirection vers la version francaise…
+    <a href="{{ '/fr/' | relative_url }}">Aller en FR</a> /
+    <a href="{{ '/mg/' | relative_url }}">Na amin'ny MG</a>
+  </p>
+  <script>
+    (function () {
+      var fr = "{{ '/fr/' | relative_url }}";
+      var mg = "{{ '/mg/' | relative_url }}";
+      var lang = (navigator.language || navigator.userLanguage || 'fr').toLowerCase();
+      var target = lang.startsWith('mg') ? mg : fr;
+      if (location.pathname !== target) location.replace(target);
+    })();
+  </script>
+</body>
+</html>

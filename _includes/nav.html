@@ -1,0 +1,11 @@
+{% assign L = site.data.i18n[page.lang] | default: site.data.i18n.fr %}
+{% assign R = site.data.i18n.routes[page.lang] %}
+<nav class="nav">
+  <a href="{{ '/' | append: page.lang | append: '/' | relative_url }}">{{ L.menu.home }}</a>
+  <a href="{{ '/' | append: page.lang | append: '/' | append: R.about      | append: '/' | relative_url }}">{{ L.menu.about }}</a>
+  <a href="{{ '/' | append: page.lang | append: '/' | append: R.news       | append: '/' | relative_url }}">{{ L.menu.news }}</a>
+  <a href="{{ '/' | append: page.lang | append: '/' | append: R.events     | append: '/' | relative_url }}">{{ L.menu.events }}</a>
+  <a href="{{ '/' | append: page.lang | append: '/' | append: R.sermons    | append: '/' | relative_url }}">{{ L.menu.sermons }}</a>
+  <a href="{{ '/' | append: page.lang | append: '/' | append: R.ministries | append: '/' | relative_url }}">{{ L.menu.ministries }}</a>
+  <a href="{{ '/' | append: page.lang | append: '/' | append: R.contact    | append: '/' | relative_url }}">{{ L.menu.contact }}</a>
+</nav>

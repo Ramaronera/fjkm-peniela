@@ -4,8 +4,8 @@ encoding: utf-8
 timezone: Europe/Paris
 permalink: pretty
 markdown: kramdown
-url: ""
-baseurl: ""
+url: "https://ramaronera.github.io"
+baseurl: "/fjkm-peniela"
 
 collections:
   events:

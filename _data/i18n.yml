@@ -5,17 +5,19 @@ fr:
     news: Actualités
     events: Évènements
     sermons: Enseignements
+    videos: Vidéos
     ministries: Ministères
     contact: Contact
 
 mg:
   menu:
     home: Fandraisana
-    about: Momban’ny fiangonana
+    about: Momban'ny fiangonana
     news: Vaovao
     events: Hetsika
     sermons: Toriteny
-    ministries: Sampan’asa
+    videos: Horonan-tsary
+    ministries: Sampan'asa
     contact: Fifandraisana
 
 routes:
@@ -24,6 +26,7 @@ routes:
     news: actualites
     events: evenements
     sermons: sermons
+    videos: videos
     ministries: ministeres
     contact: contact
   mg:
@@ -31,5 +34,6 @@ routes:
     news: vaovao
     events: hetsika
     sermons: toriteny
+    videos: horonan-tsary
     ministries: sampanasa
     contact: fifandraisana

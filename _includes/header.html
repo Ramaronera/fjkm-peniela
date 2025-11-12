@@ -1,5 +1,7 @@
 <header class="site-header">
-  <a class="brand" href="{{ '/' | append: page.lang | append: '/' | relative_url }}">{{ site.title }}</a>
-  {% include nav.html %}
-  {% include lang-switch.html %}
+  <div class="container">
+    <a class="brand" href="{{ '/' | append: page.lang | append: '/' | relative_url }}">{{ site.title }}</a>
+    {% include nav.html %}
+    {% include lang-switch.html %}
+  </div>
 </header>

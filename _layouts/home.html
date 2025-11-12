@@ -1,0 +1,72 @@
+---
+layout: default
+---
+<div class="hero">
+  <div class="container">
+    {{ content }}
+  </div>
+</div>
+
+<div class="container">
+  {% if page.lang == "fr" %}
+  <section class="content-section">
+    <div class="container">
+      <h2>Notre Mission</h2>
+      <p>
+        L'église Peniela FJKM est une communauté chrétienne engagée à servir Dieu et à partager l'amour du Christ.
+        Nous sommes dédiés à l'adoration, l'enseignement biblique, la communion fraternelle et le service aux autres.
+      </p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <h2>Nos Valeurs</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Foi</h3>
+          <p>Nous croyons en la parole de Dieu et vivons selon ses principes.</p>
+        </div>
+        <div class="card">
+          <h3>Communion</h3>
+          <p>Nous cultivons des relations authentiques et un esprit de famille.</p>
+        </div>
+        <div class="card">
+          <h3>Service</h3>
+          <p>Nous servons notre communauté avec amour et compassion.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% else %}
+  <section class="content-section">
+    <div class="container">
+      <h2>Ny Iraka Ataonay</h2>
+      <p>
+        Ny fiangonana Peniela FJKM dia vondrom-piarahamonina kristianina manolo-tena hanompo an'Andriamanitra sy hizara ny fitiavan'i Kristy.
+        Manokana ho amin'ny fivavahana, ny fampianarana ny Baiboly, ny fifandraisana ary ny fanompoana ny hafa isika.
+      </p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <h2>Ny Soatoavinay</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Finoana</h3>
+          <p>Mino ny tenin'Andriamanitra isika ary miaina araka ny fitsipiny.</p>
+        </div>
+        <div class="card">
+          <h3>Fifandraisana</h3>
+          <p>Mamboly fifandraisana marina sy fanahy fianakaviana isika.</p>
+        </div>
+        <div class="card">
+          <h3>Fanompoana</h3>
+          <p>Manompo ny vondrom-piarahana aminay amin'ny fitiavana sy fangoraham-po isika.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+</div>
